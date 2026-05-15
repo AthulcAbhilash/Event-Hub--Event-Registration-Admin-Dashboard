@@ -1,0 +1,34 @@
+[
+    {
+        "id": "20260505213106254397",
+        "name": "Arjun Menon",
+        "email": "arjun@example.com",
+        "phone": "9876543210",
+        "event": "Tech Fest",
+        "date": "2026-05-14 21:31"
+    },
+    {
+        "id": "20260505213112487209",
+        "name": "Neha Thomas",
+        "email": "neha@example.com",
+        "phone": "9876501234",
+        "event": "Workshop",
+        "date": "2026-05-14 21:34"
+    },
+    {
+        "id": "20260505213118108427",
+        "name": "Rahul Nair",
+        "email": "rahul@example.com",
+        "phone": "9876512345",
+        "event": "SSET MUN",
+        "date": "2026-05-14 21:40"
+    },
+    {
+        "id": "20260505213123798304",
+        "name": "Athul c Abhilash",
+        "email": "athul@example.com",
+        "phone": "8503933892",
+        "event": "Hackathon",
+        "date": "2026-05-14 21:41"
+    }
+]

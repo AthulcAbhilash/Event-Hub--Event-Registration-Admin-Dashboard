@@ -1,0 +1,41 @@
+[
+    {
+        "id": "evt1",
+        "name": "Tech Fest",
+        "description": "Explore cutting-edge innovations and discover the future of technology.",
+        "image": "event1.jpg",
+        "date": "2026-06-10",
+        "display_date": "25 May 2026"
+    },
+    {
+        "id": "evt2",
+        "name": "Workshop",
+        "description": "Build practical real-world skills through guided hands-on sessions.",
+        "image": "event2.jpg",
+        "date": "2026-05-15",
+        "display_date": "15 May 2026"
+    },
+    {
+        "id": "evt3",
+        "name": "Seminar",
+        "description": "Learn from experts, industry speakers, and inspiring sessions.",
+        "image": "event3.jpg",
+        "date": "2026-05-20",
+        "display_date": "20 May 2026"
+    },
+    {
+        "id": "evt4",
+        "name": "Hackathon",
+        "description": "Compete, collaborate, and innovate under pressure with your team.",
+        "image": "event4.jpg",
+        "date": "2026-05-25",
+        "display_date": "25 May 2026"
+    },
+    {
+        "id": "evt20260505212127418229",
+        "name": "SSET MUN",
+        "description": "A student-led Model United Nations event where delegates represent countries, debate global issues, draft resolutions, and build confidence in diplomacy, public speaking, and leadership.",
+        "image": "20260505212127414081_event5.jpg",
+        "date": "2026-09-25"
+    }
+]

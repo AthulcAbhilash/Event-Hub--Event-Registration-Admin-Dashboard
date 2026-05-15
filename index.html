@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Hub</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <header class="header fade-down">
+        <div class="logo-section">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo" alt="Event Hub Logo">
+            <h1>Event Hub</h1>
+        </div>
+        <a href="{{ url_for('admin_login') }}" class="top-btn">Admin</a>
+    </header>
+
+    <main class="home-wrapper">
+        <section class="hero-section fade-left">
+            <p class="eyebrow">Events Portal</p>
+            <h4>Discover Events. Register in One Click.</h4>
+        </section>
+
+        <section class="events-section fade-right">
+            <div class="section-title-row">
+                <div>
+                    <h3>Upcoming Events</h3>
+                    <p>Click any event card to open the registration form.</p>
+                </div>
+            </div>
+
+            <div class="events-grid">
+                {% for event in events %}
+                <article
+                    class="event-card"
+                    tabindex="0"
+                    role="button"
+                    data-event-name="{{ event.name }}"
+                    data-event-description="{{ event.description }}"
+                    data-event-date="{{ event.display_date }}"
+                    onclick="openRegisterModalFromCard(this)"
+                    onkeydown="openRegisterModalUsingKeyboard(event, this)"
+                >
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="{{ url_for('static', filename='images/' + event.image) }}" alt="{{ event.name }}">
+                            <div class="card-front-overlay"></div>
+                            <div class="card-title">{{ event.name }}</div>
+                        </div>
+
+                        <div class="card-back glass-back">
+                            <h3>{{ event.name }}</h3>
+                            <p>{{ event.description }}</p>
+                            <span class="event-time">{{ event.display_date }}</span>
+                            <span class="register-chip">Click to register</span>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-card glass-card register-modal-card">
+            <button class="close-btn" type="button" onclick="closeRegisterModal()">×</button>
+
+            <div class="modal-event-summary">
+                <p class="eyebrow">Register for</p>
+                <h3 id="selectedEventTitle">Event Name</h3>
+                <p id="selectedEventDescription">Event description</p>
+                <span id="selectedEventDate" class="event-time">Date</span>
+            </div>
+
+            <form action="{{ url_for('register') }}" method="POST">
+                <input type="hidden" id="selectedEventInput" name="event">
+
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="phone" placeholder="Phone Number" required>
+
+                <button type="submit" class="main-btn">Register Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
