@@ -71,22 +71,22 @@ http://127.0.0.1:5000
 
 ## Screenshots
 ### Event Hub Home
-![Event Hub Home](screenshots/event-hub-home)
+![Event Hub Home](screenshots/event-hub-home.png)
 
 ### Event Card Details
-![Event Card Details](screenshots/event-card-details)
+![Event Card Details](screenshots/event-card-details.png)
 
 ### Event Registration Modal
-![Event Registration Modal](screenshots/event-registration-modal)
+![Event Registration Modal](screenshots/event-registration-modal.png)
 
 ### Admin Login Page
-![Admin Login Page](screenshots/admin-login-page)
+![Admin Login Page](screenshots/admin-login-page.png)
 
 ### Admin Dashboard
-![Admin Dashboard](screenshots/admin-dashboard-events)
+![Admin Dashboard](screenshots/admin-dashboard-events.png)
 
 ### Registration Management
-![Registration Management](screenshots/registration-management-table)
+![Registration Management](screenshots/registration-management-table.png)
 
 ## Note
 - Please do not reuse the personal logo or branding assets without permission.
